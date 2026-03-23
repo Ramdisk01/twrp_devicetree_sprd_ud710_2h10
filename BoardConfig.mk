@@ -130,10 +130,15 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # Display
-TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888    # Check the pixel format by running the command 'dumpsys SurfaceFlinger | grep -i format' on the main system.
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+# Check the pixel format by running the command 'dumpsys SurfaceFlinger | grep -i format' on the main system.
+
 TARGET_SCREEN_DENSITY := 320
 
 ## Other config
-# TARGET_OTA_ASSERT_DEVICE :=   # Check the value by running the command 'getprop ro.puoduct.device' on the main system.
-# TW_ROTATION :=    # set to 0, 90, 180, or 270 depending on screen orientation.
-# TARGET_DEVICE := 
+# TARGET_OTA_ASSERT_DEVICE :=
+# TARGET_DEVICE :=
+# Check the value by running the command 'getprop ro.puoduct.device' on the main system.
+
+# TW_ROTATION :=
+# set to 0, 90, 180, or 270 depending on screen orientation.

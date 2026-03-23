@@ -1,0 +1,10 @@
+# If your device has already flashed a GSI or third-party ROM, or you simply do not need the features provided by Factorytest and Cali mode, then you can uncomment the code below.
+# The default has already been uncommented.
+
+on property:ro.bootmode=factorytest
+    start recovery
+    start logd
+
+on property:ro.bootmode=cali
+    start recovery
+    start logd

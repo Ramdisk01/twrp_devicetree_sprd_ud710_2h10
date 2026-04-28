@@ -4,6 +4,15 @@
 Minimal TWRP device tree for UD710-based devices with eMMC/UFS. Includes prebuilt kernel, FBE decryption, and essential recovery components.
 （You can find the eMMC and UFS versions of the tree from different branches.）
 
+
+> **Note on Dynamic Partitions (Android 10+ / `super` layout)**  
+> This repository currently **does not support dynamic partition devices**. If your target device uses a `super` partition with logical volumes for `system`/`vendor`/`product`, you need to adapt the device tree yourself.  
+> For reference, see [https://github.com/alghiffaryfa19/device_tree_twrp_jingpad] for a working example on a dynamic‑partition device.
+>
+> The **`emmc` branch** contains vendor‑specific blobs/configs that have **not** been de‑customised – it is kept only as an **example** of how a real static‑partition device tree looks on eMMC storage.  
+> When adapting the tree for your own device, always follow the general checklist in the rest of this README.
+
+
 UD710 New Device Adaptation Checklist
 
 When using this tree for another UD710 device, verify/modify the following:
@@ -69,4 +78,4 @@ make recoveryimage -j$(nproc --all)
 Output: out/target/product/ud710_2h10/recovery.img
 
 Credits
-· Atlas - providing FBE crypto solutions for the TWRP of Spreadtrum
+· Atlas - providing FBE crypto solutions for the TWRP of Spreadtrum   -- https://github.com/atlas4381
